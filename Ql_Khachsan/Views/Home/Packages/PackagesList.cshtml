@@ -1,0 +1,220 @@
+﻿
+@{
+    ViewBag.Title = "PackagesList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="pagetop">
+    <div class="container">
+        <h1>Luxury Tours</h1>
+        <ul>
+            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li><a title="" href="#">Packages</a></li>
+            <li>Room Packages</li>
+        </ul>
+    </div>
+</div><!-- Page Top -->
+
+
+
+<section>
+    <div class="block gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 column">
+                    <div class="rooms-list-view">
+                        <div class="special-deal">
+                            <div class="row">
+                                <div class="col-md-6 column">
+                                    <div class="deal-details">
+                                        <span>Complimentry Services & Amenities</span>
+                                        <h4>@Html.ActionLink("Super Star Luxury Hotle", "PackagesDetail", "Home")</h4>
+                                        <p>Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus nibh.</p>
+                                        <div class="features-price">
+                                            <div class="row">
+                                                <div class="col-md-8 column">
+                                                    <ul>
+                                                        <li>Accommodation in an Overwater Villa in Star</li>
+                                                        <li>Full Breakfast daily in Star</li>
+                                                        <li>Return transfers troughout</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-4 column">
+                                                    <div class="start-from">
+                                                        <span>Start Form</span>
+                                                        <strong>$559</strong>
+                                                        <i>Per Person</i>
+                                                        <a class="book-now" @Html.ActionLink("Book Now", "PackagesDetail", "Home")</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- Features & Price -->
+                                    </div><!-- Deal Details -->
+                                </div>
+                                <div class="col-md-6 column">
+                                    <div class="deal-gallery">
+                                        <ul class="nav nav-tabs">
+                                            <li class="active">
+                                                <a title="" href="#deal1" data-toggle="tab">
+                                                    <img src="~/Assets/images/resource/special-deal-thumb1.jpg" alt="" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a title="" href="#deal2" data-toggle="tab">
+                                                    <img src="~/Assets/images/resource/special-deal-thumb2.jpg" alt="" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a title="" href="#deal3" data-toggle="tab">
+                                                    <img src="~/Assets/images/resource/special-deal-thumb3.jpg" alt="" />
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div class="tab-pane fade in active" id="deal1">
+                                                <img src="~/Assets/images/resource/special-deal1.jpg" alt="" />
+                                            </div>
+                                            <div class="tab-pane fade" id="deal2">
+                                                <img src="~/Assets/images/resource/special-deal2.jpg" alt="" />
+                                            </div>
+                                            <div class="tab-pane fade" id="deal3">
+                                                <img src="~/Assets/images/resource/special-deal3.jpg" alt="" />
+                                            </div>
+                                        </div>
+                                    </div><!-- rooms-tabs -->
+                                </div>
+                            </div>
+                        </div><!-- Special Deals -->
+
+                        <div class="special-deal">
+                            <div class="row">
+                                <div class="col-md-6 column">
+                                    <div class="deal-details">
+                                        <span>Complimentry Services & Amenities</span>
+                                        <h4>@Html.ActionLink("Super Star Luxury Hotle", "PackagesDetail", "Home")</h4>
+                                        <p>Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus nibh.</p>
+                                        <div class="features-price">
+                                            <div class="row">
+                                                <div class="col-md-8 column">
+                                                    <ul>
+                                                        <li>Accommodation in an Overwater Villa in Star</li>
+                                                        <li>Full Breakfast daily in Star</li>
+                                                        <li>Return transfers troughout</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-4 column">
+                                                    <div class="start-from">
+                                                        <span>Start Form</span>
+                                                        <strong>$559</strong>
+                                                        <i>Per Person</i>
+                                                        <a class="book-now" @Html.ActionLink("Book Now", "PackagesDetail", "Home")</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- Features & Price -->
+                                    </div><!-- Deal Details -->
+                                </div>
+                                <div class="col-md-6 column">
+                                    <div class="deal-gallery">
+                                        <ul class="nav nav-tabs">
+                                            <li class="active">
+                                                <a title="" href="#deal4" data-toggle="tab">
+                                                    <img src="~/Assets/images/resource/special-deal-thumb3.jpg" alt="" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a title="" href="#deal5" data-toggle="tab">
+                                                    <img src="~/Assets/images/resource/special-deal-thumb2.jpg" alt="" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a title="" href="#deal6" data-toggle="tab">
+                                                    <img src="~/Assets/images/resource/special-deal-thumb1.jpg" alt="" />
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div class="tab-pane fade in active" id="deal4">
+                                                <img src="~/Assets/images/resource/special-deal3.jpg" alt="" />
+                                            </div>
+                                            <div class="tab-pane fade" id="deal5">
+                                                <img src="~/Assets/images/resource/special-deal2.jpg" alt="" />
+                                            </div>
+                                            <div class="tab-pane fade" id="deal6">
+                                                <img src="~/Assets/images/resource/special-deal1.jpg" alt="" />
+                                            </div>
+                                        </div>
+                                    </div><!-- rooms-tabs -->
+                                </div>
+                            </div>
+                        </div><!-- Special Deals -->
+
+                        <div class="special-deal">
+                            <div class="row">
+                                <div class="col-md-6 column">
+                                    <div class="deal-details">
+                                        <span>Complimentry Services & Amenities</span>
+                                        <h4>@Html.ActionLink("Super Star Luxury Hotle", "PackagesDetail", "Home")</h4>
+                                        <p>Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus nibh.</p>
+                                        <div class="features-price">
+                                            <div class="row">
+                                                <div class="col-md-8 column">
+                                                    <ul>
+                                                        <li>Accommodation in an Overwater Villa in Star</li>
+                                                        <li>Full Breakfast daily in Star</li>
+                                                        <li>Return transfers troughout</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-4 column">
+                                                    <div class="start-from">
+                                                        <span>Start Form</span>
+                                                        <strong>$559</strong>
+                                                        <i>Per Person</i>
+                                                        <a class="book-now" @Html.ActionLink("Book Now", "PackagesDetail", "Home")</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!-- Features & Price -->
+                                    </div><!-- Deal Details -->
+                                </div>
+                                <div class="col-md-6 column">
+                                    <div class="deal-gallery">
+                                        <ul class="nav nav-tabs">
+                                            <li class="active">
+                                                <a title="" href="#deal7" data-toggle="tab">
+                                                    <img src="~/Assets/images/resource/special-deal-thumb2.jpg" alt="" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a title="" href="#deal8" data-toggle="tab">
+                                                    <img src="~/Assets/images/resource/special-deal-thumb3.jpg" alt="" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a title="" href="#deal9" data-toggle="tab">
+                                                    <img src="~/Assets/images/resource/special-deal-thumb1.jpg" alt="" />
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div class="tab-pane fade in active" id="deal7">
+                                                <img src="~/Assets/images/resource/special-deal2.jpg" alt="" />
+                                            </div>
+                                            <div class="tab-pane fade" id="deal8">
+                                                <img src="~/Assets/images/resource/special-deal3.jpg" alt="" />
+                                            </div>
+                                            <div class="tab-pane fade" id="deal9">
+                                                <img src="~/Assets/images/resource/special-deal1.jpg" alt="" />
+                                            </div>
+                                        </div>
+                                    </div><!-- rooms-tabs -->
+                                </div>
+                            </div>
+                        </div><!-- Special Deals -->
+                    </div><!-- Rooms Packages -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

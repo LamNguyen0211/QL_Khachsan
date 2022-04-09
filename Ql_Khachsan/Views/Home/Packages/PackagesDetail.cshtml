@@ -1,0 +1,79 @@
+﻿
+@{
+    ViewBag.Title = "PackagesDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="pagetop">
+    <div class="container">
+        <h1>Package Detail</h1>
+        <ul>
+            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li><a title="" href="#">Packages</a></li>
+            <li>Room Packages</li>
+        </ul>
+    </div>
+</div><!-- Page Top -->
+
+
+
+<section>
+    <div class="block remove-gap gray">
+        <div class="room-gallery">
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="room-image1">
+                    <img src="~/Assets/images/resource/room-big1.jpg" alt="" />
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="room-image2">
+                    <img src="~/Assets/images/resource/room-big2.jpg" alt="" />
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="room-image3">
+                    <img src="~/Assets/images/resource/room-big3.jpg" alt="" />
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="room-image4">
+                    <img src="~/Assets/images/resource/room-big4.jpg" alt="" />
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="room-image5">
+                    <img src="~/Assets/images/resource/room-big5.jpg" alt="" />
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="room-image6">
+                    <img src="~/Assets/images/resource/room-big6.jpg" alt="" />
+                </div>
+            </div>
+            <div class="room-thumbs">
+                <div class="container">
+                    <div class="room-specs">
+                        <h4>ROOM <span>SPECS</span></h4>
+                        <ul class="features-list">
+                            <li><strong>Beds: :</strong> King</li>
+                            <li><strong>Size:</strong>  139 sqm/ 1,500sq.ft.</li>
+                            <li><strong>2015 rates:</strong> US $590 (excluding peak season)</li>
+                        </ul>
+                        <a class="book-now" @Html.ActionLink("Book Now", "BookingForm", "Home")
+                    </div>
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#room-image1" data-toggle="tab"><img src="~/Assets/images/resource/room-thumb1.jpg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#room-image2" data-toggle="tab"><img src="~/Assets/images/resource/room-thumb2.jpg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#room-image3" data-toggle="tab"><img src="~/Assets/images/resource/room-thumb3.jpg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#room-image4" data-toggle="tab"><img src="~/Assets/images/resource/room-thumb4.jpg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#room-image5" data-toggle="tab"><img src="~/Assets/images/resource/room-thumb5.jpg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#room-image6" data-toggle="tab"><img src="~/Assets/images/resource/room-thumb6.jpg" alt=""></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div><!-- Room Gallery -->
+    </div>
+</section>
+

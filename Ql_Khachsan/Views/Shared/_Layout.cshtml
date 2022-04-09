@@ -1,0 +1,483 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Hotel HTML Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="~/Assets/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/Assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/Assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="~/Assets/css/responsive.css" />
+    <link rel="stylesheet" type="text/css" href="~/Assets/css/color.css" />
+
+    @RenderSection("styles", false)
+</head>
+<body>
+    <div class="theme-layout">
+        <div class="header-container stick">
+            <div class="registration">
+                <div class="container">
+                    <span class="close-btn"><img src="~/Assets/images/cross.png" alt="" /></span>
+                    <div class="registration-form">
+                        <h3>Join For <span>Luxury Rooms</span></h3>
+                        <p>Quis autem velum lure reprehe nderit. Lorem ipsum dolor sitnulla or narjusto.</p>
+                        <form>
+                            <div class="row">
+                                <div class="col-md-8 column">
+                                    <div class="input-fields">
+                                        <div class="row">
+                                            <div class="col-md-6"><input type="text" name="firstname" placeholder="First Name *" /></div>
+                                            <div class="col-md-6"><input type="email" name="email" placeholder="your@email.com *" /></div>
+                                            <div class="col-md-6"><input type="text" name="lastname" placeholder="Last Name *" /></div>
+                                            <div class="col-md-6"><input type="password" name="psw" placeholder="Password *" /></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 column">
+                                    <p>By creating an account, you agree to our <a href="#" title="">Terms & Conditions.</a></p>
+                                    <button class="book-now">Create Account</button>
+                                </div>
+                            </div>
+                        </form><!-- form -->
+                    </div>
+                    <div class="login-form">
+                        <h3>Sign In <span>Now</span></h3>
+                        <p>Quis autem velum lure reprehe nderit. Lorem ipsum dolor sitnulla or narjusto.</p>
+                        @using (Html.BeginForm())
+                        {
+                            <div class="row">
+                                <div class="col-md-8 column">
+                                    <div class="input-fields">
+                                        <div class="row">
+                                            <div class="col-md-6"><input type="email" name="email" placeholder="your@email.com *" /></div>
+                                            <div class="col-md-6"><input type="password" name="psw" placeholder="Password *" /></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 column">
+                                    <button class="book-now">Sign In</button>
+                                </div>
+                            </div>
+                        }<!-- form -->
+                    </div>
+                </div>
+            </div><!-- Registration -->
+
+            <div class="topbar">
+                <div class="container">
+                    <div class="weather-wrapper">
+                        <div id="weather"></div>
+                    </div>
+
+                    <div class="registration-buttons">
+                        <a id="register-btn" href="#" title="">Register</a>
+                        <a id="login-btn" href="#" title="">Login</a>
+                    </div>
+                </div>
+            </div><!-- Topbar -->
+
+            <header>
+                <div class="container">
+                    <div class="logo-sec">
+                        <a href="#"><img src="~/Assets/images/logo.png" alt="" /></a>
+                    </div><!-- logo -->
+                    <nav>
+                        <a class="responsive-menu-btn" href="#" title=""><i class="fa fa-align-justify"></i></a>
+                        <ul>
+                            <li class="menu-item-has-children">
+                                @Html.ActionLink("Home", "Index", "Home")
+                            </li>
+                            <li >
+                                @Html.ActionLink("Gallery","Gallery","Home")
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#" title="">More Pages</a>
+                                <ul>
+                                    <li class="menu-item-has-children">
+                                        @Html.ActionLink("Blog Pages", "BlogGrid", "Home")
+                                        <ul>
+                                            <li>@Html.ActionLink("Blog Grid", "BlogGrid", "Home")</li>
+                                            <li>@Html.ActionLink("Blog List", "BlogList", "Home")</li>
+                                            <li>@Html.ActionLink("Blog Detail", "BlogDetail", "Home")</li>
+                                        </ul>
+                                    </li>
+                                    <li>@Html.ActionLink("Services", "Services", "Home")</li>
+                                    <li>@Html.ActionLink("Service Detail", "ServiceDetail", "Home")</li>
+                                    <li>@Html.ActionLink("Dinnings", "Dinnings", "Home")</li>
+                                    <li>@Html.ActionLink("FAQ'S", "FAQ", "Home")</li>
+                                    <li>@Html.ActionLink("Luxury Tours", "LuxuryTours", "Home")</li>
+
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children">
+                                @Html.ActionLink("Packages Grid", "PackagesGrid", "Home")
+                                <ul>
+                                    <li>@Html.ActionLink("Packages Grid", "PackagesGrid", "Home")</li>
+                                    <li>@Html.ActionLink("Packages List", "PackagesList", "Home")</li>
+                                    <li>@Html.ActionLink("Packages Detail", "PackagesDetail", "Home")</li>
+                                    <li>@Html.ActionLink("All Flights", "AllFlight", "Home")</li>
+                                    <li>@Html.ActionLink("FlightDetail", "FlightDetail", "Home")</li>
+                                    <li>@Html.ActionLink("BookingForm", "BookingForm", "Home")</li>
+                                </ul>
+                            </li>
+                            <li>@Html.ActionLink("About", "About", "Home")</li>
+                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        </ul>
+                        <a class="book-now call-popup" href="#" title="">Book Now</a>
+                    </nav><!-- nav -->
+                </div>
+            </header><!-- Header -->
+        </div><!-- Header Container -->
+        <!-- Nội dung content page -->
+        @RenderBody()
+
+        <footer>
+            <div class="block darkblue-layer">
+                <div data-velocity="-.1" style="background: url(~/Assets/images/parallax3.jpg) repeat scroll 50% 0 transparent;" class="parallax"></div>
+                <div class="container">
+                    <div class="footer-widgets">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="widget">
+                                    <div class="about-widget">
+                                        <a href="#"><img src="~/Assets/images/footer-logo.png" alt="" /></a>
+                                        <p>Vestibulum id ligula porta felis euismod sem per. Aenean eu leo quam. Pellentesque orn are sem lacinia quam venenatis. Fusce dap ibus, tellus ac cursus commodo ut fermentu massa. mentum sit amet risus.</p>
+                                    </div>
+                                </div><!-- Widget -->
+                            </div>
+                            <div class="col-md-3">
+                                <div class="widget">
+                                    <div class="widget-title">
+                                        <h4>Recent News</h4>
+                                        <span>Blog Posts</span>
+                                    </div>
+                                    <div class="widget-news">
+                                        <div class="recent-news">
+                                            <span class="date">
+                                                <i>August</i><strong>25</strong>
+                                            </span>
+                                            <a href="blog-detail.html" title="">An Exceptional Hotel Template!</a>
+                                        </div><!-- News -->
+                                        <div class="recent-news">
+                                            <span class="date">
+                                                <i>August</i><strong>18</strong>
+                                            </span>
+                                            <a href="blog-detail.html" title="">Comfortable & Spacious Apartment</a>
+                                        </div><!-- News -->
+                                    </div><!-- News Widget -->
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="widget">
+                                    <div class="offers-widget">
+                                        <div class="offer">
+                                            <img src="~/Assets/images/resource/footer-room1.jpg" alt="" />
+                                            <div class="offer-overlay">
+                                                <span>Couple Room</span>
+                                                <a href="packages-detail.html" title="">Honymoon Suite</a>
+                                            </div>
+                                        </div><!-- Offer -->
+                                        <div class="offer">
+                                            <img src="~/Assets/images/resource/footer-room2.jpg" alt="" />
+                                            <div class="offer-overlay">
+                                                <span>Couple Room</span>
+                                                <a href="packages-detail.html" title="">Honymoon Suite</a>
+                                            </div>
+                                        </div><!-- Offer -->
+                                        <div class="offer">
+                                            <img src="~/Assets/images/resource/footer-room3.jpg" alt="" />
+                                            <div class="offer-overlay">
+                                                <span>Couple Room</span>
+                                                <a href="packages-detail.html" title="">Honymoon Suite</a>
+                                            </div>
+                                        </div><!-- Offer -->
+                                    </div><!-- Offers Widget -->
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="widget">
+                                    <div class="widget-title">
+                                        <h4>Luxury Offer</h4>
+                                        <span>Local Guide</span>
+                                    </div>
+                                    <ul>
+                                        <li><i class="fa fa-umbrella"></i> Boutiques</li>
+                                        <li><i class="fa fa-laptop"></i> Complimentary wireless internet</li>
+                                        <li><i class="fa fa-clock-o"></i> Private beach with service</li>
+                                        <li><i class="fa fa-wifi"></i> Pet-friendly resort</li>
+                                        <li><i class="fa fa-umbrella"></i> Tennis courts</li>
+                                    </ul><!-- ul -->
+                                </div><!-- Luxury Offers -->
+                            </div>
+                        </div>
+                    </div><!-- Footer Widgets -->
+                </div>
+            </div>
+        </footer><!-- footer -->
+
+        <div class="bottom-footer">
+            <div class="container">
+                <div class="contact-bar">
+                    <div class="col-md-4">
+                        <div class="contact-details">
+                            <span><i class="fa fa-map-marker"></i></span>
+                            <strong>Address:</strong>
+                            <p>63 Birch Street Granada Hills, CA 91344</p>
+                        </div><!-- contact-details -->
+                    </div>
+                    <div class="col-md-4">
+                        <div class="contact-details dark">
+                            <span><i class="fa fa-phone"></i></span>
+                            <strong>Call Us Now:</strong>
+                            <p>888-832-5258, <span>888-832-5276</span></p>
+                        </div><!-- contact-details -->
+                    </div>
+                    <div class="col-md-4">
+                        <div class="contact-details">
+                            <span><i class="fa fa-envelope-square"></i></span>
+                            <strong>Email Address:</strong>
+                            <p>emailyourwebsite@webinane.com</p>
+                        </div><!-- contact-details -->
+                    </div>
+                </div><!-- contact-data -->
+                <p>&copy; 2015 <a href="#">Resort</a> - All Rights Reserved - Made By <a href="#">Webinane</a></p>
+            </div><!-- container -->
+        </div><!-- after-footer -->
+
+
+        <div class="booking-popup">
+            <div class="popup-container">
+                <div class="popup-inner">
+                    <span class="close-btn"><img src="~/Assets/images/cross.png" alt="" /></span>
+                    <div class="popup-title">
+                        <span>Any Time Worldwide</span>
+                        <h4>Book Your Room</h4>
+                        <span>Not valid for bookings less than 3 days </span>
+                    </div><!-- Popup Title -->
+                    <div class="popup-details">
+                        <div class="popup-block">
+                            <div class="row">
+                                <div class="col-md-5 column">
+                                    <div class="popup-block-title">
+                                        <span>Any Time</span>
+                                        <h4>Choose Your Date</h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-7 column">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Check In</label>
+                                                <div class="field">
+                                                    <input class="popupDatepicker" type="text" placeholder="">
+                                                    <img class="field-icon" src="~/Assets/images/calendar.png" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label>Check Out</label>
+                                                <div class="field">
+                                                    <input class="popupDatepicker" type="text" placeholder="">
+                                                    <img class="field-icon" src="~/Assets/images/calendar.png" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label>Adults</label>
+                                                <div class="field">
+                                                    <input class="inc-dec" value="00" type="text" placeholder="">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label>Kids</label>
+                                                <div class="field">
+                                                    <input class="inc-dec" value="00" type="text" placeholder="">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label>Rooms</label>
+                                                <div class="field">
+                                                    <input class="inc-dec" value="00" type="text" placeholder="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form><!-- Tab Form -->
+                                </div>
+                            </div>
+                        </div><!-- Popup Block -->
+                        <div class="popup-block">
+                            <div class="row">
+                                <div class="col-md-5 column">
+                                    <div class="popup-block-title">
+                                        <span>Awesome Rooms</span>
+                                        <h4>Your Room Summary</h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="popup-rooms">
+                                        <div class="popup-room">
+                                            <div class="popup-room-img">
+                                                <img src="~/Assets/images/resource/popup-room.jpg" alt="" />
+                                            </div>
+                                            <div class="popup-room-detail">
+                                                <i>Awesome Features Room</i>
+                                                <h5>Super Star Luxury Hotle</h5>
+                                                <div class="room-price-from">
+                                                    <strong>Start From </strong>
+                                                    <span>$289</span>
+                                                    <strong>Per Person</strong>
+                                                </div>
+                                                <a class="book-now" href="#" title="">SEE DETAILS</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- Popup Block -->
+                        <div class="popup-block">
+                            <div class="row">
+                                <div class="col-md-5 column">
+                                    <div class="popup-block-title">
+                                        <span>We Stand By</span>
+                                        <h4>Reservation Details</h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-7 column">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>First Name</label>
+                                                <div class="field">
+                                                    <input type="text" placeholder="" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label>Last Name</label>
+                                                <div class="field">
+                                                    <input type="text" placeholder="" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label>Email</label>
+                                                <div class="field">
+                                                    <input type="email" placeholder="" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label>Phone</label>
+                                                <div class="field">
+                                                    <input type="email" placeholder="" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label>City</label>
+                                                <div class="field">
+                                                    <input type="email" placeholder="" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label>Address</label>
+                                                <div class="field">
+                                                    <input type="email" placeholder="" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <label>Requirements</label>
+                                                <div class="field textarea">
+                                                    <textarea></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <button class="book-now" type="submit">BOOK NOW</button>
+                                            </div>
+                                        </div>
+                                    </form><!-- Tab Form -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Booking Popup -->
+
+        <div class="popup">
+            <div class="popup-center">
+                <div class="simple-popup-inner">
+                    <div class="alert alert-success">
+                        <span class="close-btn"><i class="fa fa-times"></i></span>
+                        <strong>WellDone!</strong>
+                        <p>Your message has been submitted to us successfully, We will get back to you shortly.</p>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Popup -->
+    </div>
+    <script src="~/Assets/js/jquery.min.js" type="text/javascript"></script>
+    <script src="~/Assets/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="~/Assets/js/owl.carousel.min.js" type="text/javascript"></script>
+    <script src="~/Assets/js/jquery.poptrox.min.js" type="text/javascript"></script>
+    <script src="~/Assets/js/enscroll-0.5.2.min.js" type="text/javascript"></script>
+    <script src="~/Assets/js/jquery.scrolly.js" type="text/javascript"></script>
+    <script src="~/Assets/js/jquery.isotope.min.js" type="text/javascript"></script>
+    <script src="~/Assets/js/isotope-initialize.js" type="text/javascript"></script>
+    <script src="~/Assets/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
+    <script src="~/Assets/js/userincr.js" type="text/javascript"></script>
+    <script src="~/Assets/js/jquery.simpleWeather.min.js"></script>
+    <script src="~/Assets/js/script.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        $(window).load(function () {
+
+            /*================== SERVICES CAROUSEL ======================*/
+            $('.service-carousel').owlCarousel({
+                autoplay: true,
+                autoplayTimeout: 30000,
+                smartSpeed: 2000,
+                loop: true,
+                dots: false,
+                nav: true,
+                margin: 10,
+                items: 3,
+                autoHeight: true,
+                responsive: {
+                    0: { items: 1 },
+                    480: { items: 2 },
+                    767: { items: 3 },
+                    980: { items: 3 }
+                }
+            });
+
+
+            /*================== CLIENTS CAROUSEL ======================*/
+            $('.clients-carousel').owlCarousel({
+                autoplay: true,
+                autoplayTimeout: 30000,
+                smartSpeed: 2000,
+                loop: true,
+                dots: false,
+                nav: true,
+                margin: 10,
+                items: 5,
+                autoHeight: true,
+                responsive: {
+                    0: { items: 1 },
+                    480: { items: 3 },
+                    767: { items: 4 },
+                    980: { items: 5 }
+                }
+            });
+        });
+
+    </script>
+    @RenderSection("Script", false)
+</body>
+</html>
+
